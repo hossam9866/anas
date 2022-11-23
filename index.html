@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>RegistrationForm_v4 by Colorlib</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .ques {
+        text-align: center;
+        font-size: 16px;
+        padding: 5px 0;
+        color: black;
+      }
+      .radios {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+      }
+      label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .slider {
+        padding: 10px 0 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .input-last {
+        width: 150px !important;
+        margin: 10px auto;
+        height: 35px;
+        border-radius: 15px;
+        background-color: #c4c4c4;
+        color: #661b66;
+      }
+      input[type="range"] {
+        accent-color: #661b66;
+        width: 250px;
+        height: 4px;
+      }
+      .slider-show {
+        text-align: center;
+        margin: 0;
+        padding: 0 0 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="inner">
+        <div class="image-holder">
+          <img src="images/gg.jpg" alt="" />
+          <p>dsd</p>
+        </div>
+        <form action="">
+          <h3 style="margin-bottom: 10px">User Details</h3>
+          <p class="ques">Does he have a tv subscription?</p>
+          <div class="radios">
+            <label style="margin-right: 10px">
+              <input
+                id="tv-sub"
+                type="radio"
+                class="radio"
+                value="1"
+                name="fooby[1][]"
+                checked />
+              <p>Yes</p></label
+            >
+            <label>
+              <input type="radio" class="radio" value="1" name="fooby[1][]" />
+              <p>No</p>
+            </label>
+          </div>
+
+          <p class="ques">
+            What is the download average for the last three month in GB?
+          </p>
+          <input
+            id="gb"
+            type="number"
+            class="form-control input-last"
+            step=".1"
+            min="0"
+            value="0" />
+
+          <p class="ques">How many years did he subscribe?</p>
+          <div class="slider">
+            <span>0</span>
+            <input
+              id="sub-years"
+              class="range"
+              name="years-sub"
+              type="range"
+              min="0.0"
+              max="13.0"
+              step="0.1"
+              value="0.9" />
+            <span>13</span>
+          </div>
+          <div id="years-sub" class="slider-show"></div>
+
+          <p class="ques">How many years left in his contract?</p>
+          <div class="slider">
+            <span>0</span>
+            <input
+              id="left-years"
+              class="range"
+              name="years-left"
+              type="range"
+              min="0.0"
+              max="3.0"
+              step="0.1"
+              value="0" />
+            <span>3</span>
+          </div>
+          <div id="years-sub" class="slider-show"></div>
+
+          <p class="ques">How many times he had service failure?</p>
+          <div class="slider">
+            <span>0</span>
+            <input
+              id="times-fail"
+              class="range"
+              name="failure"
+              type="range"
+              min="0.0"
+              max="19.0"
+              step="1"
+              value="0" />
+            <span>19</span>
+          </div>
+          <div id="years-sub" class="slider-show"></div>
+
+          <div class="form-login">
+            <button>Sign up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/function.js"></script>
+  </body>
+  <!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
